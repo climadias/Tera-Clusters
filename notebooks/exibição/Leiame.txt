@@ -1,0 +1,13 @@
+site referência: https://docs.streamlit.io/en/stable/api.html
+
+Verifiquem se consegue instalar no ambiente básico do anaconda. O meu não é o base e não tive problemas
+
+https://discuss.streamlit.io/t/install-streamlit-with-anaconda/714
+
+executar na linha de comnado com o ambiente anaconda ativado
+
+streamlit run <arquivo>.py
+
+
+
+

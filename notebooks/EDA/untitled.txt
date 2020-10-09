@@ -1,0 +1,27 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+plt.rc('figure', figsize=(12, 8))
+import janitor
+
+import datetime
+
+import sqlite3 as sql
+
+from sklearn.cluster import KMeans
+from numpy import unique
+from numpy import where
+
+#nomalizing data to its std (x_new= x/std(x))
+from scipy.cluster.vq import whiten
+
+
+# carrega tabela para análise
+con = sql.connect("../../dados/sql/base_completa.db")
+df=pd.read_sql("select * from senadores_tabela_analise",con)
+con.close()
+
+variaveis_numericas=list(df.select_dtypes(include=[np.number]).columns)
+variaveis_categoricas= list(df.select_dtypes(include="category").columns)
+variaveis_modelo=variaveis_numericas+variaveis_categoricas
