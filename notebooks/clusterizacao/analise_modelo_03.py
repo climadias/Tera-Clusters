@@ -419,3 +419,7 @@ for mod1 in lista:
 df_ari_score=pd.DataFrame(ari_score)
 sns.heatmap(df_ari_score,annot=True, cmap="Blues")
 st.pyplot()
+
+#
+# Fim
+#
